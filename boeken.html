@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="NL">
+<head>
+	<meta charset="utf-8">
+	<title>Accomodatie boeken</title>
+
+	<h1>Accomodatie Boeken</h1>
+	<p>Op deze pagina kunt u een kamer in ins hotel boeken en nog een aantal foto's en een filmpje bekijken</p>
+</head>
+<body>
+
+	<form method="post">
+
+		<label for="Naam" >Naam:
+			<input type="text" id="Naam" name="Naam" required>
+		</label> <br>
+		<label for="Adres">Adres:
+			<input type="text" id="Adres" name="Adres" required>
+		</label> <br>
+		<label for="Postcode">Postcode:
+			<input type="text"  minlength ="6" maxlength="6" id="Postcode" name="Postcode" pattern="[0-9-a-z]{6}" required>
+		</label> <br>
+		<label for="Woonplaats">Woonplaats:
+			<input type="text" id="Woonplaats" name="Woonplaats" required>
+		</label> <br>
+		<label for="Telefoonnummer">Telefoonnr:
+			<input type="tel" id="Telefoonnummer" name="Telefoonnummer" pattern="[0-9]{9}" required>
+		</label> <br>
+		<label for="Email">E-mail:
+			<input type="email" id="Email" name="Email" >
+			<small>Format: naam@domein.extensie</small>
+		</label> <br>
+
+		<h2>Reservering</h2>
+		<label for="Personen">Aantal Personen:
+			<input type="number" id="Personen" name="Personen" min="1" max="10"  required>
+		</label> <br>
+		<label for="Aankomst">Aankomstdatum:
+			<input type="date" id="Aankomst" name="Aankomst" required>
+		</label> <br>
+		<label for="Verblijf">Verblijfsduur (2-20 Dagen):
+			<input type="range" id="Verblijf" name="Verblijf" min="2" max="20" step="2">
+		</label> <br>
+		<label for="Verzorging">Verzorging:
+			<select id="Verzorging" name="Verzorging" size="1" required>
+				<Option value="">Maak een keuze...</Option>
+				<Option value="Optie1">Optie 1</Option>
+				<Option value="Optie2">Optie 2</Option>
+				<Option value="Optie3">Optie 3</Option>
+			</select>
+		</label> <br>
+		<label for="VerzekeringJa"> Annuleringsverzekering:	
+		</label>
+		<label for="VerzekeringJa"> Ja
+			<input type="radio" id="VerzekeringJa" name="Verzekering" value="Ja" required>
+		</label>
+		<label for="VerzekeringNee"> Nee
+			<input type="radio" id="VerzekeringNee" name="Verzekering" value="Nee" required>
+		</label>
+		<br>
+		<label for="Opmerkingen">Opmerkingen bij uw bestelling
+			<textarea id="Opmerkingen" name="Opmerkingen" rows="5"></textarea>
+		</label>
+		<button type="submit" value="https://jkorpela.fi/cgi-bin/echo.cgi">Reserveer</button>
+	</form>
+
+	<h2>Foto's</h2>
+	<figure id="Binnenplaats">
+		<img src="./img/spanje2.jpg" alt="Binnenplaats" title="Binnenplaats" height="200" width="400"> <br>
+		<figcaption >Binnenplaats</figcaption>
+	</figure>
+	<figure id="Kathedraal">
+		<img src="./img/spanje3.jpg" alt="Kathedraal" title="Kathedraal" height="200" width="400"><br>
+		<figcaption >Kathedraal</figcaption>
+	</figure>
+	<figure id="Haven">
+		<img src="./img/spanje4.webp" alt="Haven" title="Haven" height="200" width="400"><br>
+		<figcaption >Haven</figcaption>
+	</figure>
+	<figure id="Kust">
+		<img src="./img/spanje5.jpg" alt="Kust" title="Kust" height="200" width="400"><br>
+		<figcaption  >Kust</figcaption>
+	</figure>
+	
+	
+	
+
+	<h2>Filmpje</h2>
+	<p>Een kort inspiratiefilmpje van de mooie omgeving</p>
+	<video width="320" height="240" controls>
+		<source src="./vid/SpanjeVideo.mp4" type="video/mp4">
+		Your browser does not support the video tag.
+	  </video>
+</body>
+</html>
